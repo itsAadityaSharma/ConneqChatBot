@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Your webpage content -->
+  <h1>Welcome to My Website</h1>
+  <p>This is a demo page.</p>
+
+  <!-- Chatbot container -->
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <img src="Integration.png" alt="conneqtion-integration">
+      <span>Chat with us</span>
+      <div class="close-btn" onclick="toggleChatbot()"><i class="arrow down"></i></div>
+    </div>
+    <div class="chatbot-body">
+      
+      <div id="chatbot-messages" class="chatbot-messages"> </div>
+      <input type="text" id="user-input" placeholder="Type a message...">
+      <button class="sendMessage" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
