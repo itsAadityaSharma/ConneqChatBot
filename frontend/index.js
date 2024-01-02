@@ -23,4 +23,10 @@ function sendMessage() {
     const chatbotContainer = document.querySelector('chatbot-container');
     chatbotContainer.classList.toggle('closed');
   }
+  function handleKeyDown(event) {
+    if (event.key === 'Enter') {
+      sendMessage();
+    }
+  }
+  
   
