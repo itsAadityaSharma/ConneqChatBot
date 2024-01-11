@@ -1,98 +1,235 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: employeeInfo
+    examples: |
+      - Tell me more about [name](emloyee).
+      - Provide information on [name](emloyee).
+      - I need details about [name](emloyee), please.
+      - Can you give me information about [name](emloyee)?
+      - Tell me about [name](emloyee)'s background.
+      - What details do you have on [name](emloyee)?
+      - Provide me with information regarding [name](emloyee).
+      - Give me the scoop on [name](emloyee).
+      - What can you tell me about [name](emloyee)?
+      - I'm interested in learning about [name](emloyee).
+      - Inform me about [name](emloyee)'s profile.
+      - Details, please. [name](emloyee).
+      - What's there to know about [name](emloyee)?
+      - Can you share insights into [name](emloyee)'s profile?
+      - Give me the lowdown on [name](emloyee).
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: employeeContactInfo
+    examples: |
+      - What's the contact information for employee ID [empId](employeeId)?
+      - Can you provide the contact details for employee ID [empId](employeeId)?
+      - I need the contact information for employee number [empId](employeeId).
+      - What's the phone number and email for employee ID [empId](employeeId)?
+      - Could you share the contact details for employee with ID [empId](employeeId)?
+      - Provide the contact information for the employee having ID [empId](employeeId).
+      - I'm looking for the contact details of employee ID [empId](employeeId).
+      - Can you give me the contact info for employee [empId](employeeId)?
+      - What contact information is available for employee ID [empId](employeeId)?
+      - Share the contact details for the employee identified by [empId](employeeId).
+      - Tell me how to contact the employee with ID [empId](employeeId).
+      - I'd like to know the contact information for employee [empId](employeeId).
+      - Could you fetch the contact details for employee ID [empId](employeeId)?
+      - Provide the contact info for the employee with ID [empId](employeeId).
+      - What are the contact details for employee [empId](employeeId)?
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: employeeSalesDepartment
+    examples: |
+      - Share information about the employees in the Sales department.
+      - Can you provide details on the Sales department's employees?
+      - I'm interested in learning about the team in the Sales department.
+      - Tell me about the staff working in Sales.
+      - Provide insights into the employees within the Sales department.
+      - What can you tell me about the Sales team members?
+      - I'd like information on the employees belonging to Sales.
+      - Share details about the team in the Sales department.
+      - Give me an overview of the Sales department's employees.
+      - Tell me about the individuals working in Sales.
+      - I'm curious about the employees within the Sales department.
+      - Provide details about the staff in Sales.
+      - What's the composition of the Sales department's workforce?
+      - Share insights into the employees affiliated with Sales.
+      - Can you tell me more about the Sales team members?
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: employeeTeamMembers
+    examples: |
+    - Tell me about the team members in [Project X](projectName).
+    - Provide details on who is part of [Project X](projectName).
+    - I'm interested in knowing the individuals on [Project X](projectName).
+    - Can you share information about the team working on [Project X](projectName)?
+    - Tell me about the members of [Project X](projectName).
+    - Give me insights into the team members assigned to [Project X](projectName).
+    - Who comprises the team for [Project X](projectName)?
+    - Provide an overview of the individuals involved in [Project X](projectName).
+    - Share details about the team working on [Project X](projectName).
+    - I'd like information on the members of [Project X](projectName).
+    - Tell me more about the team members in [Project X](projectName).
+    - Can you list the individuals on [Project X](projectName)?
+    - Give me an overview of the team assigned to [Project X](projectName).
+    - Share insights into the members of [Project X](projectName).
+    - Who are the individuals that make up [Project X](projectName)'s team?
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: emplyeeRetrieveInfo
+    examples: |
+    - Get me details for employee [name](emloyee).
+    - Retrieve information about [name](emloyee), the employee.
+    - Provide data on employee [name](emloyee).
+    - I need information regarding [name](emloyee), the employee.
+    - Can you fetch details for [name](emloyee) in the employee records?
+    - Retrieve employee details for [name](emloyee).
+    - I'm looking for information about employee [name](emloyee).
+    - Fetch details for [name](emloyee) in the employee database.
+    - Retrieve information for the employee with the name [name](emloyee).
+    - Provide me with details for employee [name](emloyee).
+    - I'd like to know more about the employee named [name](emloyee).
+    - Fetch employee records for [name](emloyee).
+    - Retrieve information for the specific employee, [name](emloyee).
+    - I'm interested in employee details for [name](emloyee).
+    - Can you retrieve the employee information for [name](emloyee)?
 
-- intent: get_annualLeaves_count
-  examples: |
-    - how many annual leaves do i have?
-    - how many casual leaves do i have?
-    - how many total leaves do i have?
-    - Can you tell me how many annual leaves are left?
+  -intent: employeeUpcomingHolidays
+    examples: |
+    - Can you tell me about the upcoming holidays?
+    - Are there any holidays scheduled in the near future?
+    - I'd like to know if there are upcoming holidays.
+    - Can you provide information on holidays coming up?
+    - What holidays are approaching?
+    - Tell me about any holidays that are coming soon.
+    - Are there any upcoming holidays I should be aware of?
+    - I'm curious about the holidays in the upcoming weeks.
+    - Can you inform me about any holidays on the horizon?
+    - What holidays can we expect in the near future?
+    - Are there any upcoming holidays on the calendar?
+    - Can you tell me about the holidays that are on the way?
+    - I want to know if there are any holidays approaching.
+    - Are there any holidays scheduled for the upcoming weeks?
+    - Tell me about the upcoming holidays, please.
+
+  -intent: employeeTimesheet
+    examples: |
+    - Can you retrieve the timesheet for the Finance department?
+    - I need information on the timesheet for Finance.
+    - Retrieve the timesheet data for the Finance department.
+    - Get me the timesheet details for Finance.
+    - I'd like to access the timesheet information for Finance.
+    - Can you provide the timesheet for the Finance team?
+    - Retrieve the timesheet for employees in the Finance department.
+    - I want to see the timesheet records for Finance.
+    - Get the timesheet details for Finance, please.
+    - I'm interested in the timesheet for the Finance department.
+    - Retrieve the timesheet entries for Finance.
+    - Can you fetch the timesheet data for Finance?
+    - I need access to the timesheet information for Finance.
+    - Retrieve the timesheet records for the Finance team.
+    - Provide me with the timesheet for the Finance department.
+
+
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: get_annualLeaves_count
+    examples: |
+      - how many annual leaves do i have?
+      - how many casual leaves do i have?
+      - how many total leaves do i have?
+      - Can you tell me how many annual leaves are left?
+
+  - intent: order_pizza
+    examples: |
+      - I want to order a [pizza](food)
+      - Can i get a [pizza](food)
+      - i'd like to have a [pizza](food)
+      - lets's order a [pizza](food)
+      - how about a [pizza](food)
