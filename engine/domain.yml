@@ -33,6 +33,17 @@ responses:
   utter_leaves_count:
   - text: "You have total [totalLeaves] [leavesType] left."
 
+  utter_employeeInfo:
+  - text: "Sure, here are the details for [name](emloyee): [card]. Is there anything else you would like to know?"
+
+  utter_employeeContactInfo:
+  - text: "Sure, here are the details for [name](emloyee): [card]. Is there anything else you would like to know?"
+
+  utter_employeeSalesDepartment:
+  - text: "Sure, here are the employees in the Sales department:[fields]. Please let me know if you need more information or if there's anything else I can assist you with."
+
+  utter_employeeTeamMember:
+  - text: "Here are the Employees"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

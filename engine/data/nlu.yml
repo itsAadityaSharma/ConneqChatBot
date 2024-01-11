@@ -96,3 +96,74 @@ nlu:
     - how many casual leaves do i have?
     - how many total leaves do i have?
     - Can you tell me how many annual leaves are left?
+
+- intent: employeeInfo
+  examples: |
+    - Tell me more about [name](emloyee)
+    - Provide information on [name](emloyee).
+    - I need details about [name](emloyee), please.
+    - Can you give me information about [name](emloyee)?
+    - Provide me with information regarding [name](emloyee).
+    - Give me the scoop on [name](emloyee).
+    - What can you tell me about [name](emloyee)?
+    - I'm interested in learning about [name](emloyee).
+    - Inform me about [name](emloyee)'s profile.
+    - Details, please. [name](emloyee).
+    - What's there to know about [name](emloyee)?
+    - Can you share insights into [name](emloyee)'s profile?
+    - Give me the lowdown on [name](emloyee).
+
+- intent: employeeContactInfo
+  examples: |
+    - What's the contact information for employee ID [empId](employeeId)?
+    - Can you provide the contact details for employee ID [empId](employeeId)?
+    - I need the contact information for employee number [empId](employeeId).
+    - What's the phone number and email for employee ID [empId](employeeId)?
+    - Could you share the contact details for employee with ID [empId](employeeId)?
+    - Provide the contact information for the employee having ID [empId](employeeId).
+    - I'm looking for the contact details of employee ID [empId](employeeId).
+    - Can you give me the contact info for employee [empId](employeeId)?
+    - What contact information is available for employee ID [empId](employeeId)?
+    - Share the contact details for the employee identified by [empId](employeeId).
+    - Tell me how to contact the employee with ID [empId](employeeId).
+    - I'd like to know the contact information for employee [empId](employeeId).
+    - Could you fetch the contact details for employee ID [empId](employeeId)?
+    - Provide the contact info for the employee with ID [empId](employeeId).
+    - What are the contact details for employee [empId](employeeId)?
+
+- intent: employeeSalesDepartment
+  examples: |
+    - Share information about the employees in the Sales department.
+    - Can you provide details on the Sales department's employees?
+    - I'm interested in learning about the team in the Sales department.
+    - Tell me about the staff working in Sales.
+    - Provide insights into the employees within the Sales department.
+    - What can you tell me about the Sales team members?
+    - I'd like information on the employees belonging to Sales.
+    - Share details about the team in the Sales department.
+    - Give me an overview of the Sales department's employees.
+    - Tell me about the individuals working in Sales.
+    - I'm curious about the employees within the Sales department.
+    - Provide details about the staff in Sales.
+    - What's the composition of the Sales department's workforce?
+    - Share insights into the employees affiliated with Sales.
+    - Can you tell me more about the Sales team members
+
+
+- intent: employeeTeamMembers
+  examples: |
+    - Tell me about the team members in [Project X](projectName).
+    - Provide details on who is part of [Project X](projectName).
+    - I'm interested in knowing the individuals on [Project X](projectName).
+    - Can you share information about the team working on [Project X](projectName)?
+    - Tell me about the members of [Project X](projectName).
+    - Give me insights into the team members assigned to [Project X](projectName).
+    - Who comprises the team for [Project X](projectName)?
+    - Provide an overview of the individuals involved in [Project X](projectName).
+    - Share details about the team working on [Project X](projectName).
+    - I'd like information on the members of [Project X](projectName).
+    - Tell me more about the team members in [Project X](projectName).
+    - Can you list the individuals on [Project X](projectName)?
+    - Give me an overview of the team assigned to [Project X](projectName).
+    - Share insights into the members of [Project X](projectName).
+    - Who are the individuals that make up [Project X](projectName)'s team
