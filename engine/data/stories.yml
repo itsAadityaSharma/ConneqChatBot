@@ -34,3 +34,24 @@ stories:
   - intent: order_food
   - action: action_order_food
 
+
+
+- story: get employee info
+  steps:
+  - intent: employeeInfo
+  - action: utter_employeeInfo
+
+- story: get employee contact info
+  steps:
+  - intent: employeeContactInfo
+  - action: utter_employeeContactInfo
+
+- story: get employee Sales Department
+  steps:
+  - intent: employeeSalesDepartment
+  - action: utter_employeeSalesDepartment
+
+- story: get employee Team Members
+  steps:
+  - intent: employeeTeamMembers
+  - action: utter_teamMemberInfo

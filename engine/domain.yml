@@ -11,47 +11,29 @@ intents:
   - get_annualLeaves_count
   - order_pizza
   - employeeInfo
+  - employeeContactInfo
+  - employeeSalesDepartment
+  - employeeTeamMembers
 
 entities:
-  -food
+  - food
 responses:
   utter_employeeInfo:
-  - text: "Sure, here are the details for [name](emloyee):
-    Name: [name](emloyee)
-    Employee ID: JD12345
-    Department: IT
-    Position: Software Engineer
-    Joining Date: 01/05/2018
-    Leave Balance: 15 days
-    Contact Number: 123-456-7890
-    Email: john.doe@example.com
-    Is there anything else you would like to know?"
+  - text: "Sure, here are the details for [name](emloyee): [card] Is there anything else you would like to know?"
 
 
   utter_employeeContactInfo:
-  - text: "Sure, here are the details for [name](emloyee):
-    Name: [name](emloyee)
-    Employee ID: JD12345
-    Contact Number: 123-456-7890
-    Email: john.doe@example.com
-    Is there anything else you would like to know?"
+  - text: "Sure, here are the details for [name](emloyee): [card]. Is there anything else you would like to know?"
 
 
   utter_employeeSalesDepartment:
-  - text: "Sure, here are the employees in the Sales department:
-    John Smith
-    Emily Taylor
-    David Jones
-    Ava Anderson
-    Christopher Thomas
-    Amelia Lewis
-    Benjamin Hall
-    Please let me know if you need more information or if there's anything else I can assist you with."
-
+  - text: "Sure, here are the employees in the Sales department: [card] Please let me know if you need more information or if there's anything else I can assist you with."
 
   utter_employeeDepartment:
   - text: "The team members for [Project X](projectName) are [NamesWhoAreInProjectX]."
 
+  utter_teamMemberInfo:
+  - text: "the team is working"
 
 
   utter_greet:
