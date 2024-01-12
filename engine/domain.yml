@@ -8,7 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - get_annualLeaves_count
+  - get_Leaves_count
 
 responses:
   utter_greet:

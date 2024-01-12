@@ -90,7 +90,7 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: get_annualLeaves_count
+- intent: get_Leaves_count
   examples: |
     - how many annual leaves do i have?
     - how many casual leaves do i have?
