@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-emloyee",
+      "2": "I-emloyee",
+      "3": "L-emloyee",
+      "4": "U-emloyee",
+      "5": "B-employeeId",
+      "6": "I-employeeId",
+      "7": "L-employeeId",
+      "8": "U-employeeId",
+      "9": "B-projectName",
+      "10": "I-projectName",
+      "11": "L-projectName",
+      "12": "U-projectName",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-emloyee": 1,
+      "I-emloyee": 2,
+      "L-emloyee": 3,
+      "U-emloyee": 4,
+      "B-employeeId": 5,
+      "I-employeeId": 6,
+      "L-employeeId": 7,
+      "U-employeeId": 8,
+      "B-projectName": 9,
+      "I-projectName": 10,
+      "L-projectName": 11,
+      "U-projectName": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

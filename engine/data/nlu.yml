@@ -167,3 +167,21 @@ nlu:
     - Give me an overview of the team assigned to [Project X](projectName).
     - Share insights into the members of [Project X](projectName).
     - Who are the individuals that make up [Project X](projectName)'s team
+
+- intent: upcomingHolidays
+  examples: |
+    - Are there any holidays coming up?
+    - Can you tell me about any upcoming holidays?
+    - What are the upcoming holidays?
+    - Do we have any holidays scheduled in the near future?
+    - Could you inform me about the holidays that are approaching?
+    - Are there any upcoming days off?
+    - Can you provide information on the upcoming holidays?
+    - What holidays do we have in the upcoming weeks?
+    - Are there any upcoming public holidays?
+    - Could you let me know about the holidays that are on the horizon?
+    - What's the schedule for upcoming holidays?
+    - Are there any holidays planned in the coming days?
+    - Can you inform me about any holidays we should be aware of?
+    - What holidays are on the agenda for the near future?
+    - Are there any upcoming breaks or holidays?
