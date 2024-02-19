@@ -4,7 +4,7 @@ rules:
 - rule: Get leaves count on the basis of leave type
   steps:
   - intent: get_Leaves_count
-  - action: utter_leaves_count
+  - action: action_get_leaves
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye

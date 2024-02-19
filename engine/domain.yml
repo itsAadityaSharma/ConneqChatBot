@@ -10,7 +10,14 @@ intents:
   - bot_challenge
   - get_Leaves_count
   - upcomingHolidays
-
+  # - employeeInfo
+  # - employeeContactInfo
+  # - employeeTeamMembers
+  # - employeeSalesDepartment
+entities:
+  - leaveType
+actions:
+  - action_get_leaves
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -31,20 +38,20 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_leaves_count:
-  - text: "You have total [totalLeaves] [leavesType] left."
+  # utter_leaves_count:
+  # - text: "You have total [totalLeaves] [leavesType] left."
 
-  utter_employeeInfo:
-  - text: "Sure, here are the details for [name](emloyee): [card]. Is there anything else you would like to know?"
+  # utter_employeeInfo:
+  # - text: "Sure, here are the details for [name](emloyee): [card]. Is there anything else you would like to know?"
 
-  utter_employeeContactInfo:
-  - text: "Sure, here are the details for [name](emloyee): [card]. Is there anything else you would like to know?"
+  # utter_employeeContactInfo:
+  # - text: "Sure, here are the details for [name](emloyee): [card]. Is there anything else you would like to know?"
 
-  utter_employeeSalesDepartment:
-  - text: "Sure, here are the employees in the Sales department:[fields]. Please let me know if you need more information or if there's anything else I can assist you with."
+  # utter_employeeSalesDepartment:
+  # - text: "Sure, here are the employees in the Sales department:[fields]. Please let me know if you need more information or if there's anything else I can assist you with."
 
-  utter_employeeTeamMember:
-  - text: "Here are the Employees"
+  # utter_employeeTeamMember:
+  # - text: "Here are the Employees"
 
   utter_upcomingHoliday:
   - text: "Here are the upcoming holidays: | Pongal/Sankranti/Baishakhi - January 15, 2024  | Republic Day - January 26, 2024 | Holi - March 25, 2024"

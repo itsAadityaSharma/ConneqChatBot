@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: get leaves
+  steps:
+  - intent: get_Leaves_count
+  - action: action_get_leaves
