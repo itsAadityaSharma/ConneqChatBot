@@ -19,3 +19,29 @@ rules:
   steps:
   - intent: upcomingHolidays
   - action: upcomingHolidays
+
+- rule: Tell about something about yourself
+  steps:
+  - intent: aboutUs
+  - action: utter_aboutUs
+
+- rule: Tell about Oracle
+  steps:
+  - intent: OIC
+  - action: utter_OIC
+
+
+- rule: Tell about VBCS
+  steps:
+  - intent: VBCS
+  - action: utter_VBCS
+
+- rule: Tell about migrstion
+  steps:
+  - intent: Migration
+  - action: utter_migration
+
+- rule: Tell about company
+  steps:
+  - intent: company
+  - action: utter_company

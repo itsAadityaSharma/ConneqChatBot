@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - get_Leaves_count
   - upcomingHolidays
+  - aboutUs
   # - employeeInfo
   # - employeeContactInfo
   # - employeeTeamMembers
@@ -40,6 +41,21 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_aboutUs:
+  - text: "Conneqtion Group is Oracle Cloud Infrastructure (OCI) Partner and our core business is to help businesses to implement digital solutions in ERP and Analytics. We are consulting and services firm based out of India and UAE specializing in Oracle. Our team has years of experience and expertise in Oracle Cloud implementation using OUM methodology. We use innovation to bring transformation for our clients. In the last couple of years, Conneqtion Group has offered Oracle professional services to over 50+ SME and large scale enterprises."
+
+  utter_OIC:
+  - text: "Oracle Integration Cloud (OIC) is a cloud-based integration platform that enables businesses to connect their applications and data across cloud and on-premises environments. It provides a range of integration capabilities, such as application integration, process automation, and data integration, among others. Learn more about "
+  
+  utter_VBCS:
+  - text: "Oracle Visual Builder Cloud Service (VBCS) is a cloud-based development platform that allows developers to build and deploy web and mobile applications quickly. VBCS provides a visual development environment, a range of pre-built templates and components, and a powerful back-end service, making it possible to create modern, responsive applications without the need for extensive coding or development experience. Discover the "
+  
+  utter_migration:
+  - text: "Conneqtion can assist with data migration using their in-house products by providing assessment and planning services, migration tools and frameworks, customization and integration, and ongoing support and maintenance."
+  
+  utter_company:
+  - text: "Conneqtion group is a digital automation company. We have a customer-centric approach and work closely with clients to provide customized solutions that meet their specific requirements."
+  
   # utter_leaves_count:
   # - text: "You have total [totalLeaves] [leavesType] left."
 

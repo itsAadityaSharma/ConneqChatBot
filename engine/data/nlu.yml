@@ -186,3 +186,27 @@ nlu:
     - Can you inform me about any holidays we should be aware of?
     - What holidays are on the agenda for the near future?
     - Are there any upcoming breaks or holidays?
+
+- intent: aboutUs
+  examples: |
+    - Who are you?
+    - What does Conneqtion Group do?
+    - Tell me about your self
+    - What services do you have?
+
+- intent: OIC
+  examples: |
+    - What is Oracle Integration Cloud?
+    - What is OIC?
+
+- intent: VBCS
+  examples: |
+    - What is Oracle VBCS?
+
+- intent: Migration
+  examples: |
+    - How can Conneqtion help in Data Migration using in-house products?
+
+- intent: company
+  examples: |
+    - How is Conneqtion Group as a company?

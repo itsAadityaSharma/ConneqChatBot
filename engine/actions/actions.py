@@ -116,4 +116,3 @@ class ActionGetUpcomingHolidays(Action):
             dispatcher.utter_message(text="Error parsing leave data. Please try again later.")
         
         return []
-
