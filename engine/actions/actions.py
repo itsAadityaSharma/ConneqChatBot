@@ -25,6 +25,22 @@ from tabulate import tabulate
     # Process the data here
     # print(data)
 
+
+def remove_fields(obj, fields_to_remove):
+    if not isinstance(obj, dict):
+        return obj
+    result = {}
+    for key, value in obj.items():
+        if key not in fields_to_remove:
+            if isinstance(value, dict):
+                result[key] = remove_fields(value, fields_to_remove)
+            elif isinstance(value, list):
+                result[key] = [remove_fields(item, fields_to_remove) for item in value]
+            else:
+                result[key] = value
+    return result
+
+
 class ActionGetLeaves(Action):
 
     def name(self) -> Text:
@@ -33,11 +49,9 @@ class ActionGetLeaves(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("hello world")
-        print(tracker.sender_id)
         
         url = 'https://ge39e7b01ee1b6f-connetqdevdb.adb.ap-mumbai-1.oraclecloudapps.com/ords/test_schema/conneqtion_leave/?q={"emp_id":1}'
-        
+
         try:
             response = requests.get(url=url)
             response.raise_for_status()  # Raise an exception for HTTP errors (e.g., 404, 500)
@@ -45,9 +59,20 @@ class ActionGetLeaves(Action):
             items = data['items'][0]
             annual_leave = items.get('annual_leave')
             casual_leave = items.get('casual_leave')
-            dispatcher.utter_message(text=f'You have annual leave {annual_leave} and casual leave {casual_leave}')
-            
-        
+            # annual_leave_Entity=next(tracker.get_latest_entity_values("holidayType"),None)
+            leave_Entity=tracker.latest_message.get('entities',[])
+            # print(leave_Entity[0].get('value').upper()=="ANNUAL LEAVES")
+            if(len(leave_Entity)>1):
+                dispatcher.utter_message(text=f'You have annual leave {annual_leave} and casual leave {casual_leave}')
+            elif(leave_Entity[0].get('value').upper()=="ANNUAL LEAVES"):
+                dispatcher.utter_message(text=f'You have annual leave {annual_leave} only')
+            elif(leave_Entity[0].get('value').upper()=="CASUAL LEAVES"):
+                dispatcher.utter_message(text=f'You have casual leave {casual_leave} only')
+            elif(leave_Entity[0].get('value').upper()=="TOTAL LEAVES"):
+                dispatcher.utter_message(text=f'You TOTAL have annual leave {annual_leave} and casual leave {casual_leave}')
+            elif(len(leave_Entity)<1):
+                dispatcher.utter_message(text='Which leaves type do you want?')
+
         except requests.exceptions.RequestException as e:
             print("Error fetching data:", e)
             dispatcher.utter_message(text="Failed to fetch leave data. Please try again later.")
@@ -96,16 +121,50 @@ class ActionGetUpcomingHolidays(Action):
                 pass
             table = tabulate(result, headers=headers, tablefmt="grid")
             dispatcher.utter_message(text=f"Here is the data:\n{table}")
+            # dispatcher.utter_message(json_message)
 #             current_date = datetime.date.today()
+        
+        except requests.exceptions.RequestException as e:
+            print("Error fetching data:", e)
+            dispatcher.utter_message(text="Failed to fetch leave data. Please try again later.")
+        
+        except (KeyError, IndexError) as e:
+            print("Error parsing response:", e)
+            dispatcher.utter_message(text="Error parsing leave data. Please try again later.")
+        
+        return []
 
-# # Print current date
-#             print("Current date:", current_date)
 
 
+class ActionGetEmpData(Action):
 
+    def name(self) -> Text:
+        return "action_get_EmpData"
 
-
-
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        
+        url = 'https://ge39e7b01ee1b6f-connetqdevdb.adb.ap-mumbai-1.oraclecloudapps.com/ords/test_schema/employees_data?q={"first_name":{"$instr":"'
+        
+        try:
+            nameEntity=tracker.latest_message.get('entities',[])
+            print(nameEntity)
+            url=url+f'{nameEntity[0].get("value")}"'+"}"+"}"
+            print(url)
+            response = requests.get(url=url)
+            response.raise_for_status()  # Raise an exception for HTTP errors (e.g., 404, 500)
+            data = response.json()
+            # items = data['items']
+            headers = "keys"
+            # annual_leave = items.get('annual_leave')
+            # casual_leave = items.get('casual_leave')
+            items = remove_fields(data,["links","count","offset","hasMore","limit","updated_on","updated_by","created_on","created_by"])
+            # print(items)
+            table = tabulate(items['items'], headers=headers, tablefmt="grid")
+            dispatcher.utter_message(text=f'Employee Data : {table}')
+            
         
         except requests.exceptions.RequestException as e:
             print("Error fetching data:", e)

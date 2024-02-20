@@ -11,15 +11,17 @@ intents:
   - get_Leaves_count
   - upcomingHolidays
   - aboutUs
-  # - employeeInfo
+  - employeeInfo
   # - employeeContactInfo
   # - employeeTeamMembers
   # - employeeSalesDepartment
 entities:
   - leaveType
   - holidayType
+  - emloyee
 actions:
   - action_get_leaves
+  - action_get_EmpData
   - upcomingHolidays
 responses:
   utter_greet:

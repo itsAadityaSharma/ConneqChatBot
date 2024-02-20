@@ -97,21 +97,21 @@ nlu:
     - how many [total leaves](leaveType) do i have?
     - Can you tell me how many [annual leaves](leaveType) are left?
 
-# - intent: employeeInfo
-#   examples: |
-#     - Tell me more about [user.name](emloyee)
-#     - Provide information on [name](emloyee).
-#     - I need details about [name](emloyee), please.
-#     - Can you give me information about [name](emloyee)?
-#     - Provide me with information regarding [name](emloyee).
-#     - Give me the scoop on [name](emloyee).
-#     - What can you tell me about [name](emloyee)?
-#     - I'm interested in learning about [name](emloyee).
-#     - Inform me about [name](emloyee)'s profile.
-#     - Details, please. [name](emloyee).
-#     - What's there to know about [name](emloyee)?
-#     - Can you share insights into [name](emloyee)'s profile?
-#     - Give me the lowdown on [name](emloyee).
+- intent: employeeInfo
+  examples: |
+    - Tell me more about [John](emloyee)
+    - Provide information on [Jane](emloyee).
+    - I need details about [Alice](emloyee), please.
+    - Can you give me information about [Bob](emloyee)?
+    - Provide me with information regarding [Eva](emloyee).
+    - Give me the scoop on [Charlie](emloyee).
+    - What can you tell me about [Grace](emloyee)?
+    - I'm interested in learning about [David](emloyee).
+    - Inform me about [Sophio](emloyee)'s profile.
+    - Details, please. [Liam](emloyee).
+    - What's there to know about [name](emloyee)?
+    - Can you share insights into [name](emloyee)'s profile?
+    - Give me the lowdown on [name](emloyee).
 
 # - intent: employeeContactInfo
 #   examples: |

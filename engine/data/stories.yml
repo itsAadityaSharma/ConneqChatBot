@@ -33,3 +33,8 @@ stories:
   steps:
   - intent: get_Leaves_count
   - action: action_get_leaves
+
+- story: get emp data
+  steps:
+  - intent: employeeInfo
+  - action: action_get_EmpData

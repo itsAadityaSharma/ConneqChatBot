@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-emloyee",
+      "2": "I-emloyee",
+      "3": "L-emloyee",
+      "4": "U-emloyee",
+      "5": "B-holidayType",
+      "6": "I-holidayType",
+      "7": "L-holidayType",
+      "8": "U-holidayType",
+      "9": "B-leaveType",
+      "10": "I-leaveType",
+      "11": "L-leaveType",
+      "12": "U-leaveType",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-emloyee": 1,
+      "I-emloyee": 2,
+      "L-emloyee": 3,
+      "U-emloyee": 4,
+      "B-holidayType": 5,
+      "I-holidayType": 6,
+      "L-holidayType": 7,
+      "U-holidayType": 8,
+      "B-leaveType": 9,
+      "I-leaveType": 10,
+      "L-leaveType": 11,
+      "U-leaveType": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
