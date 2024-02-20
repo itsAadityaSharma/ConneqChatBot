@@ -171,6 +171,7 @@ nlu:
 - intent: upcomingHolidays
   examples: |
     - Are there any holidays coming up?
+    - tell me about [optional Holidays](holidayType)
     - Can you tell me about any upcoming holidays?
     - What are the upcoming holidays?
     - Do we have any holidays scheduled in the near future?

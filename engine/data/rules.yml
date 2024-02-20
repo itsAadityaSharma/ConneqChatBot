@@ -18,4 +18,4 @@ rules:
 - rule: Tell about upcoming holidays
   steps:
   - intent: upcomingHolidays
-  - action: utter_upcomingHoliday
+  - action: upcomingHolidays

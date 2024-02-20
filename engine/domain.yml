@@ -16,8 +16,10 @@ intents:
   # - employeeSalesDepartment
 entities:
   - leaveType
+  - holidayType
 actions:
   - action_get_leaves
+  - upcomingHolidays
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -53,8 +55,8 @@ responses:
   # utter_employeeTeamMember:
   # - text: "Here are the Employees"
 
-  utter_upcomingHoliday:
-  - text: "Here are the upcoming holidays: | Pongal/Sankranti/Baishakhi - January 15, 2024  | Republic Day - January 26, 2024 | Holi - March 25, 2024"
+  # utter_upcomingHoliday:
+  # - text: "Here are the upcoming holidays: | Pongal/Sankranti/Baishakhi - January 15, 2024  | Republic Day - January 26, 2024 | Holi - March 25, 2024"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
